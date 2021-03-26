@@ -644,13 +644,14 @@ void RMW_Connext_MessageTypeSupport::type_info(
   /* The fastrtps type support sets full_bounded to false if unbounded,
      but assumes full_bounded == true by default */
   bool full_bounded = true;
+  bool is_plain = true;
 
   serialized_size_max =
-    static_cast<uint32_t>(callbacks->max_serialized_size(full_bounded));
+    static_cast<uint32_t>(callbacks->max_serialized_size(full_bounded, is_plain));
 
   unbounded = !full_bounded;
 
-  if (unbounded && serialized_size_max == 0) {
+  if (is_plain && serialized_size_max == 0) {
     /* Empty message */
     empty = true;
     serialized_size_max = 1;
