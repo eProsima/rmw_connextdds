@@ -8,3 +8,4 @@ rmw_connextdds user manual
    :name: toc_usr
 
    build-opts
+   release-history

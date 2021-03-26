@@ -7,5 +7,5 @@ rmw_connextdds documentation
    :caption: Table of Contents
    :name: toc_top
 
-   user/index
-   dev/index
+   rmw_connextdds_common/docs/user/index
+   rmw_connextdds_common/docs/dev/index
